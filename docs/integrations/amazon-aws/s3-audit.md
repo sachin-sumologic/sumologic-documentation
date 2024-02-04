@@ -10,11 +10,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Amazon Simple Storage Service (S3) provides a simple web services interface that can be used to store and retrieve any amount of data from anywhere on the web. The Sumo Logic App for Amazon S3 Audit presents details from access logs that contain information about the request type, the average response time, and the inbound and outbound data volume.
 
+
 ## Log types
 
 Amazon S3 Audit uses Server Access Logs (activity logs). For more information on the log format, see: [http://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html).
 
-### Sample log message
+
+### Sample log messages
 
 The server access log files consist of a sequence of new-line delimited log records. Each log record represents one request and consists of space delimited fields. The following is an example log consisting of six log records.
 
@@ -23,6 +25,7 @@ The server access log files consist of a sequence of new-line delimited log reco
 ```
 
 ### Sample query
+### Sample queries
 
 ```sql
 | parse "* * [*] * * * * * \"* HTTP/1.1\" * * * * * * * \"*\" *" as bucket_owner, bucket, time, remoteIP, requester, request_ID, operation, key, request_URI, status_code, error_code, bytes_sent, object_size, total_time, turn_time, referrer, user_agent, version_ID
@@ -56,7 +59,9 @@ In Sumo Logic, configure a [Hosted Collector](/docs/send-data/hosted-collectors/
 
 ### Configure an S3 Audit Source
 
-{@import ../../reuse/apps/create-aws-s3-source.md}
+import Aws3 from '../../reuse/apps/create-aws-s3-source.md';
+
+<Aws3/>
 
 ### Field Extraction Rules
 
@@ -72,7 +77,11 @@ parse "* * [*] * * * * * \"* HTTP/1.1\" * * * * * * * \"*\" *" as bucket_owner, 
 
 Now that you have configured log collection for Amazon S3 Audit, install the Sumo Logic App for Amazon S3, and take advantage of predefined Searches and dashboards. The Sumo Logic App for Amazon S3 Audit presents details from access logs that contain information about the request type, the average response time, and the inbound and outbound data volume.
 
-{@import ../../reuse/apps/app-install-v2.md}
+import AppInstall from '../../reuse/apps/app-install-v2.md';
+
+<AppInstall/>
+
+## Viewing Amazon S3 Audit dashboards
 
 ## Viewing Amazon S3 Audit dashboards
 

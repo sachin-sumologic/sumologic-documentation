@@ -14,9 +14,11 @@ The Cloud Security Monitoring & Analytics for Windows App offers pre-built dashb
 This section provides instructions for configuring log collection for the Windows - Cloud Security Monitoring and Analytics App.
 
 ## Log types
+## Log types
 
 The Windows - Cloud Security Monitoring and Analytics App uses Windows Security Event and System Event logs. It does not work with third-party logs.
 
+### Sample log messages
 ### Sample log messages
 
 ```json
@@ -87,7 +89,9 @@ For more information on local or remote Windows Event Log Source configuration, 
 
 ## Installing the Windows Cloud Security app
 
-{@import ../../reuse/apps/app-install-v2.md}
+import AppInstall from '../../reuse/apps/app-install.md';
+
+<AppInstall/>
 
 ## Viewing Windows Cloud Security dashboards​
 

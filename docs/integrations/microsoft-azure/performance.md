@@ -12,6 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 The Windows Performance App provides insight into your system's operation and events so that you can better manage and maintain your Windows systems. The App uses predefined Dashboards and searches that provide visibility into your environment for real-time analysis of system and network performance and overall usage.
 
 ## Log types
+## Log types
 
 The Windows Performance App assumes events are coming from Windows Performance Sources.
 
@@ -152,7 +153,9 @@ To complete the configuration, you'll need to edit each Windows Performance Sour
 
 ## Installing the Windows Performance app
 
-{@import ../../reuse/apps/app-install-v2.md}
+import AppInstall from '../../reuse/apps/app-install.md';
+
+<AppInstall/>
 
 ## Viewing Windows Performance dashboards​
 

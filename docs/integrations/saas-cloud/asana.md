@@ -18,10 +18,11 @@ Key features of the Asana app include:
 - **Integration with other sources**. This app can be used in conjunction with other Sumo Logic apps, which enables you to gain a more holistic view of the data.
 
 ## Log types
+## Log types
 
 This app uses Asana Source to collect [Audit Logs](https://developers.asana.com/reference/audit-log-api) from Asana.
 
-### Sample log message
+### Sample log messages
 
 ```json title="Audit Log"
 {
@@ -65,7 +66,7 @@ _sourceCategory="asana-app"
 
 ## Set up collection
 
-To set up [Cloud to Cloud Integration Asana Source](/docs/send-data/hosted-collectors/cloud-to-cloud-integration-framework/asana-source/) for the Asana app, follow the instructions provided. These instructions will guide you through the process of creating a source using the Asana Source category, which you will need to use when installing the app. By following these steps, you can ensure that your Asana app is properly integrated and configured to collect and analyze your Asana data.
+To set up [Cloud-to-Cloud Integration Asana Source](/docs/send-data/hosted-collectors/cloud-to-cloud-integration-framework/asana-source/) for the Asana app, follow the instructions provided. These instructions will guide you through the process of creating a source using the Asana Source category, which you will need to use when installing the app. By following these steps, you can ensure that your Asana app is properly integrated and configured to collect and analyze your Asana data.
 
 ## Installing the Asana app
 
@@ -74,7 +75,9 @@ To set up [Cloud to Cloud Integration Asana Source](/docs/send-data/hosted-colle
 
 ## Viewing Asana dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import AppInstall from '../../reuse/apps/app-install.md';
+
+<AppInstall/>
 
 ### Overview
 

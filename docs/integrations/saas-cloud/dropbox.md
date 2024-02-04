@@ -1,6 +1,6 @@
 ---
 id: dropbox
-title: Sumo Logic App for Dropbox
+title: Dropbox
 sidebar_label: Dropbox
 description: The Dropbox App for Sumo Logic allows organizations to monitor and analyze their Dropbox usage data.
 ---
@@ -22,6 +22,7 @@ The Dropbox App for Sumo Logic offers several useful features:
 
 To help you get started quickly, the app provides pre-built dashboards and searches that display important Dropbox usage metrics like top users, file access patterns, and shared files. In summary, the Dropbox App for Sumo Logic provides you with the necessary tools to monitor and analyze your organization's Dropbox usage data, giving you valuable insights into user behavior and potential security risks.
 
+## Log types
 ## Log types
 
 The Dropbox App for Sumo Logic uses [Team events from Dropbox](https://www.dropbox.com/developers/documentation/http/teams#team_log-get_events) to generate logs that can be used for monitoring and analysis. To access more information about the specific fields for the v2 version of Dropbox events, refer to the [Migration guide](https://www.dropbox.com/developers/reference/events-migration-guide), which provides a comprehensive list of available log types.
@@ -118,7 +119,9 @@ This section provides instructions for setting up [Cloud-to-Cloud-Integration fo
 
 ## Installing the Dropbox app
 
-{@import ../../reuse/apps/app-install-v2.md}
+import AppInstall from '../../reuse/apps/app-install.md';
+
+<AppInstall/>
 
 ## Viewing Dropbox dashboards
 
