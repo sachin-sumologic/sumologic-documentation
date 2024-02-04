@@ -21,7 +21,6 @@ The Sumo Logic app for Artifactory only supports Artifactory On-Premise. It does
 ## Artifactory
 
 ### Log types
-### Log types
 
 The Sumo Logic app for Artifactory collects data from the following logs:
 
@@ -52,7 +51,6 @@ Sumo Logic reads logs in the directory `/var/opt/jfrog/artifactory/logs`:
 2017-01-13 18:54:12,121 [ACCEPTED DEPLOY] pypi-remote-cache:.pypi/test.html for billythekid/1.1.1.1.
 ```
 
-### Sample queries
 ### Sample queries
 
 ```sql title="Data Transfer Over Time"
@@ -87,11 +85,9 @@ _sourceCategory=*artifactory* "ACCEPTED DEPLOY" "-cache"
 | outlier paths
 ```
 
-
 ### Collecting logs
 
 This section demonstrates how to collect logs from JFrog Artifactory into Sumo Logic.
-
 
 #### Step 1: Activate the traffic.log file
 
@@ -185,13 +181,10 @@ _sourceCategory=*artifactory*
 | parse "*|*|*|*|*|*|*|*|*|*" as datetime, response_time, type, ip, user, method, path, protocol, status_code, size
 ```
 
-
 ## JFrog Artifactory 7
 
 This procedure documents how to collect logs from JFrog Artifactory 7 into Sumo Logic.
 
-
-### Log types
 ### Log types
 
 For each JFrog service, you will find its active log files in the `$JFROG_HOME/<product>/var/log` directory. For consistency, each log file is prefixed by its service name and a dash, `<service-name>-service.log`. For example, artifactory-service.log and router-request.log.
@@ -202,7 +195,6 @@ For each JFrog service, you will find its active log files in the `$JFROG_HOME/<
 * `artifactory-traffic.*.log`
 
 For more information about Artifactory logs, see JFrog's [Artifactory Log Files,](https://www.jfrog.com/confluence/display/JFROG/Logging) [Access Logs](https://www.jfrog.com/confluence/display/JFROG/Access+Log).
-
 
 ### Sample logs
 
@@ -221,7 +213,6 @@ For more information about Artifactory logs, see JFrog's [Artifactory Log Files,
 jcenter-cache:com/cloudera/cdh/cdh-root/5.4.4-SNAPSHOT/maven-metadata.xml for client :
 admin/149.5.95.40.
 ```
-
 
 ### Sample queries
 
@@ -244,7 +235,6 @@ _sourceCategory = Labs/artifactory/* "login" DENIED
 | count as Attempts by ip, user
 | sort by Attempts
 ```
-
 
 ```bash title="Most Active Locations"
 _sourceCategory = Labs/artifactory/*
@@ -330,14 +320,15 @@ For complete instructions, see [Local File Source](/docs/send-data/installed-col
 
 ## Installing the Artifactory app
 
-{@import ../../reuse/apps/app-install-v2.md}
-
 import AppInstall from '../../reuse/apps/app-install.md';
 
 <AppInstall/>
+
 ## Viewing JFrog Artifactory dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 

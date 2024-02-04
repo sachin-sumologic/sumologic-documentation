@@ -28,7 +28,6 @@ The Jenkins app uses the following log types:
 * **Job Console Logs**. Log events related to job console logs.
 
 ### Sample log messages
-### Sample log messages
 
 <details>
 <summary><strong>Click to expand.</strong> See sample log messages for log types, such as Authentication, Configuration Change, Shutdown, and Job Status.</summary>
@@ -58,7 +57,6 @@ The Jenkins app uses the following log types:
   "eventTime": "2019-06-05 15:17:28,237 +00:00"
 }
 ```
-
 
 ```json title="Shutdown"
 {
@@ -417,7 +415,9 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Jenkins dashboards​
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 
@@ -517,7 +517,6 @@ Use this dashboard to:
 
 <img src={useBaseUrl('img/integrations/app-development/Jenkins-JobInformation.png')} alt="jenkins" />
 
-
 #### Build Information
 
 The **Jenkins - Build Information** dashboard provides detailed information about a specific build. Panels show information on build parameters, source control management, commit details, test cases, pipeline stages, console logs, and configuration changes prior to a build.
@@ -530,7 +529,6 @@ Use this dashboard to:
 * Identify command failure for pipeline jobs using stage and stack trace information.
 
 <img src={useBaseUrl('img/integrations/app-development/Jenkins-BuildInformation.png')} alt="jenkins" />
-
 
 #### Pipeline Stage Monitoring
 

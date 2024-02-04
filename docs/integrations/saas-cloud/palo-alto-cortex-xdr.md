@@ -173,7 +173,9 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Palo Alto Cortex XDR dashboards​
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Alerts Overview
 

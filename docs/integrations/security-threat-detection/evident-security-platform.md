@@ -15,7 +15,7 @@ The Evident.io Evident Security Platform (ESP) streamlines and optimizes vulnera
 
 ## Log types
 
-The Evident.io ESP App collects monitoring alerts.
+The Evident.io ESP app collects monitoring alerts.
 
 For details on the log format and definitions, refer to Evident.io documentation at [http://docs.evident.io/](http://docs.evident.io/).
 
@@ -180,7 +180,6 @@ For details on the log format and definitions, refer to Evident.io documentation
 
 </details>
 
-
 ### Sample query
 
 ```sql title="Alerts by Status"
@@ -272,16 +271,16 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Evident.io ESP dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Evident.io ESP - Overview
 
 <img src={useBaseUrl('img/integrations/security-threat-detection/Evident.ioESP_Overview_Dashboard.png')} alt="Evident.io ESP dashboards" />
 
 **New Risks.** Displays the number of new risks in a single value chart over the previous 24 hours.
-**New Risks.** Displays the number of new risks in a single value chart over the previous 24 hours.
 
-**New Risks by Severity.** Shows the severity of new risks in a stacked column chart on a timeline for the last 24 hours.
 **New Risks by Severity.** Shows the severity of new risks in a stacked column chart on a timeline for the last 24 hours.
 
 **New High Severity Risks.** Provides details on the new high severity risks in a table chart over the last 24 hours.
@@ -291,7 +290,6 @@ import AppInstall from '../../reuse/apps/app-install.md';
 **Resolved Risks.** Shows which risks have been resolved over the last 24 hours in a table chart.
 
 **Total Risks over Time.** Shows a trendline of all alerts over the last 14 days in a stacked area chart.
-
 
 ### Detailed Risks
 

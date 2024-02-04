@@ -14,7 +14,6 @@ Imperva Incapsula is a cloud-based application delivery service that includes we
 The Sumo Logic app for Imperva Incapsula - Web Application Firewall (WAF) helps you monitor your web application protection service. The preconfigured dashboards provide insights on the threat alerts events.
 
 ## Log types
-## Log types
 
 The Imperva Incapsula - Web Application Firewall App uses security and access logs. For more details, see [here](https://docs.incapsula.com/Content/management-console-and-settings/log-integration.htm?Highlight=siem#Overview).
 
@@ -88,7 +87,6 @@ To configure log integration, do the following:
 
 For detailed instructions, see [here](https://docs.incapsula.com/Content/management-console-and-settings/log-integration.htm?Highlight=siem#Enable).
 
-
 #### Set up in Sumo Logic
 
 To configure log collection for Sumo Logic, do the following:
@@ -103,7 +101,10 @@ import AppInstall from '../../reuse/apps/app-install.md';
 <AppInstall/>
 
 ## Viewing Imperva-Incapsula WAF dashboards​
-{@import ../../reuse/apps/view-dashboards.md}
+
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 

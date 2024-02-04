@@ -22,7 +22,6 @@ Before you begin, your Observable Networks portal must be properly configured. C
 :::
 
 ## Log types
-## Log types
 
 The Sumo Logic App for Observable Networks assumes Observable Networks formatted logs, which provide one JSON message per request.
 
@@ -56,7 +55,6 @@ Configure an [HTTP Source](/docs/send-data/hosted-collectors/http-source/logs-me
 
 When the URL associated with the Source is displayed, copy the URL so you can use it to send files.
 
-
 ### Configure the Observable Portal
 
 1. From your Observable Networks portal, click **Settings (gear icon) > Integrations > Sumo Logic > Settings**.
@@ -65,11 +63,9 @@ When the URL associated with the Source is displayed, copy the URL so you can us
 
 Your Observable Networks deployment will now publish alert and endpoint information to Sumo Logic.
 
-
 #### Configure Log Monitoring (optional)
 
 If you have Sumo Logic API access, you can integrate Observable Networks and Sumo Logic even further. You can configure Observable Networks to identify devices on your network that do not have Collectors installed. Additionally, Observable Networks can parse authentication log ("auth.log") data from certain Linux distributions (e.g., Ubuntu) to monitor user access.
-
 
 #### Identify Missing Collectors
 
@@ -97,7 +93,6 @@ To parse authentication logs:
 2. From the **Auth.log** dropdown, select the log configuration that represents the auth.log source.
 3. Click **Save**.
 
-### Sample log messages
 ### Sample log messages
 
 ```json
@@ -143,7 +138,6 @@ To parse authentication logs:
 ```
 
 ### Sample queries
-### Sample queries
 
 ```sql title="Recent Flow Counts"
 _sourceCategory=observable | json field=_raw "obsrvbl_type", "effective_session_count" as type, session_count
@@ -152,7 +146,6 @@ _sourceCategory=observable | json field=_raw "obsrvbl_type", "effective_session_
 | sum(session_count) group by _timeslice
 | order by _timeslice
 ```
-
 
 ```sql title="Top Observation Host"
 _sourceCategory=observable
@@ -164,13 +157,15 @@ _sourceCategory=observable
 
 ## Install the Observable Networks app
 
-{@import ../../reuse/apps/app-install-v2.md}
-
 import AppInstall from '../../reuse/apps/app-install.md';
 
 <AppInstall/>
 
-{@import ../../reuse/apps/view-dashboards.md}
+## Viewing Observable Networks dashboards
+
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 

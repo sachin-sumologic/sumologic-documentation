@@ -22,11 +22,9 @@ With the DocuSign App, you can:
 * Analyze user behavior to identify potential security threats by looking for deviations from normal patterns of activity.
 
 ## Log types
-## Log types
 
 The DocuSign App for Sumo Logic uses [Events](https://developers.docusign.com/docs/monitor-api/monitor101/events-alerts/events-list) and [Alerts](https://developers.docusign.com/docs/monitor-api/monitor101/events-alerts/alerts-list) data to generate logs that can be used for monitoring and analysis.
 
-### Sample log messages
 ### Sample log messages
 
 ```json title="Sample Events Log Message"
@@ -130,7 +128,6 @@ The DocuSign App for Sumo Logic uses [Events](https://developers.docusign.com/do
 ```
 
 ### Sample queries
-### Sample queries
 
 This section contains the sample queries of both the `Events` and `Alerts`.
 
@@ -170,18 +167,20 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing DocuSign dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 
-**DocuSign - Overview** dashboard gives you information about the records of recently added users and administrators. It gives insights regarding total alerts fired, new templates created, envelopes signed, documents downloaded, and new groups created in the organization. It also provides geo-location and trends of all the events. The App visualizes the distribution of all the operations happening in the organization.
+The **DocuSign - Overview** dashboard gives you information about the records of recently added users and administrators. It gives insights regarding total alerts fired, new templates created, envelopes signed, documents downloaded, and new groups created in the organization. It also provides geo-location and trends of all the events. The App visualizes the distribution of all the operations happening in the organization.
 
 In addition to the above, the App summarizes the most frequent events, alerts, sources, activities from high-risk countries, and document modifications. Overall, this dashboard offers comprehensive information about the team's activity and facilitates efficient monitoring of various important events.<br/><img src={useBaseUrl('img/integrations/saas-cloud/docusign-overview.png')} alt="docusign-overview.png" width="800"/>
 
 ### Alerts
 
-**DocuSign - Alerts** dashboard keeps track of when some bulk action is performed or multiple login sessions from different locations happen. Also, it gives you insights about high, medium, and low alerts. It further summarizes all the alerts based on their severity over time.<br/><img src={useBaseUrl('img/integrations/saas-cloud/docusign-alerts.png')} alt="docusign-alerts.png" width="900"/>
+The **DocuSign - Alerts** dashboard keeps track of when some bulk action is performed or multiple login sessions from different locations happen. Also, it gives you insights about high, medium, and low alerts. It further summarizes all the alerts based on their severity over time.<br/><img src={useBaseUrl('img/integrations/saas-cloud/docusign-alerts.png')} alt="docusign-alerts.png" width="900"/>
 
 ### Users
 
-**DocuSign - Users** dashboard gives you detailed information regarding the operations performed by the users of the organizations. It gives you the geo-locations of all the user logins and login activity from high-risk locations. Also, it gives visibility into user login activity and distribution of sources of user activity. Furthermore, it summarizes the critical updates in settings, roles, and permissions.<br/><img src={useBaseUrl('img/integrations/saas-cloud/docusign-users.png')} alt="docusign-users.png" width="900"/>
+The **DocuSign - Users** dashboard gives you detailed information regarding the operations performed by the users of the organizations. It gives you the geo-locations of all the user logins and login activity from high-risk locations. Also, it gives visibility into user login activity and distribution of sources of user activity. Furthermore, it summarizes the critical updates in settings, roles, and permissions.<br/><img src={useBaseUrl('img/integrations/saas-cloud/docusign-users.png')} alt="docusign-users.png" width="900"/>

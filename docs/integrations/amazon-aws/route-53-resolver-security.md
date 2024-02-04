@@ -17,6 +17,7 @@ With [Route 53 Resolver DNS Firewall](https://docs.aws.amazon.com/Route53/latest
 DNS Firewall is a feature of Route 53 Resolver and doesn't require any additional Resolver setup to use.
 
 ## Log types
+
 The Amazon Route 53 Resolver Security app uses:
 * [Route 53 Resolver query log](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logs-example-json.html)
 * [DNS Resolver Firewall Log](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/firewall-resolver-query-logs-configuring.html)
@@ -49,7 +50,6 @@ If you want to set up Route 53 Resolver DNS Firewall, see the Amazon Developer G
 
 [Route 53 Resolver query log example](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logs-example-json.html)
 
-
 ## Installing the Amazon Route 53 Resolver Security app
 
 import AppInstall from '../../reuse/apps/app-install.md';
@@ -58,7 +58,9 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Amazon Route 53 Resolver Security dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashborads from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashborads/>
 
 ### Query Logging Overview
 

@@ -27,8 +27,7 @@ Once you begin uploading data, your daily data usage will increase. It's a good 
    * From OneLogin, configure a broadcaster that points to this endpoint using the instructions in the [OneLogin documentation](https://onelogin.service-now.com/support?id=kb_article&sys_id=43f95543db109700d5505eea4b961959). You must use SIEM (NDJSON) format. Use the Sumo Logic HTTP Source URL as the Listener URL, and custom header is not needed.
 
 
-## Log types and Sample Log Message
-## Log types and 
+## Log types  
 
 The Sumo Logic app for OneLogin uses event logs in NDJSON format. 
 
@@ -130,9 +129,9 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing OneLogin dashboards
 
-## Viewing OneLogin Dashboards
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
 
-{@import ../../reuse/filter-dashboards.md}
+<ViewDashboards/>
 
 ### Overview
 
@@ -143,7 +142,6 @@ import AppInstall from '../../reuse/apps/app-install.md';
 **Logins by Country.** See the count of number of logins by country name displayed in a table to get an idea of your visitor traffic by country in the last 24 hours.
 
 **Event Outlier Over Time.** See the events that fall outside the normal range for the last 24 hours.
-**Event Outlier Over Time.** See the events that fall outside the normal range for the last 24 hours.
 
 **Failed Login Outlier.** See any logins over the last 24 hours that fall outside the specified failed login threshold.
 
@@ -153,12 +151,10 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 <img src={useBaseUrl('img/integrations/saml/OneLoginOverview.png')} alt="OneLogin" />
 
-
 ### App Monitoring
 
 **Event Distribution by App.** See the percentage of events by application in the last 24 hours as a pie chart to identify the event distribution by apps having the most events recently.
 
-**Event Distribution by Event ID.** See the percentage of each user action by Event ID for the last 24 hours as a pie chart to identify the apps having the most activity recently.
 **Event Distribution by Event ID.** See the percentage of each user action by Event ID for the last 24 hours as a pie chart to identify the apps having the most activity recently.
 
 **Logins by App.** See the percentage of logins by application in the last 24 hours as a pie chart to identify the apps having the most events recently.
@@ -170,6 +166,7 @@ import AppInstall from '../../reuse/apps/app-install.md';
 <img src={useBaseUrl('img/integrations/saml/OneLoginAppMonitoring.png')} alt="OneLogin" />
 
 ### Security
+
 **User Activity.** View the count of user activities by username as a bar chart for the last 24 hours as a bar chart to quickly identify unusual user activity.
 
 **Password Changes.** See the count of password changes by username as a bar chart for the last 24 hours to quickly identify any unusually high numbers of password changes by a particular user.
@@ -177,16 +174,13 @@ import AppInstall from '../../reuse/apps/app-install.md';
 **Logins by Country.** View the count of the logins by country in the last 24 hours to identify any unusual activity by country.
 
 **Users Created in Apps.** See the number of users created in applications in the last 24 hours as a column chart. You can filter by app name to track the count of a particular app.
-**Users Created in Apps.** See the number of users created in applications in the last 24 hours as a column chart. You can filter by app name to track the count of a particular app.
 
-**Assumed Users.** View the details such as the timestamp, destination user, notes, source user, and count for the event when one user acted as another user in the last 24 hours.
 **Assumed Users.** View the details such as the timestamp, destination user, notes, source user, and count for the event when one user acted as another user in the last 24 hours.
 
 **Failed Logins.** See the number of login failures by username in the last 24 hours on a bar chart to identify any unusual activity. You can filter by username as needed.
 
 **Successful Logins.** See the number of successful logins by username in the last 24 hours to identify any unusual activity. You can filter by username as needed.
 
-**User Modifications.** See user modifications by timestamp, destination user, source user, notes, and error description for the last 24 hours displayed in  table. You can filter by time, user name, source user, or error description as needed to track unusual behavior.
 **User Modifications.** See user modifications by timestamp, destination user, source user, notes, and error description for the last 24 hours displayed in  table. You can filter by time, user name, source user, or error description as needed to track unusual behavior.
 
 <img src={useBaseUrl('img/integrations/saml/OneLoginSecurity.png')} alt="OneLogin" />

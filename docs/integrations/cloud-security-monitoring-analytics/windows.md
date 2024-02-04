@@ -9,16 +9,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('img/integrations/cloud-security-monitoring-analytics/SecMon_Windows.png')} alt="Thumbnail icon" width="85"/>
 
-The Cloud Security Monitoring & Analytics for Windows App offers pre-built dashboards and queries to help you track your Windows system, user accounts, login activity, and Windows updates.
+The Cloud Security Monitoring & Analytics for Windows app offers pre-built dashboards and queries to help you track your Windows system, user accounts, login activity, and Windows updates.
 
-This section provides instructions for configuring log collection for the Windows - Cloud Security Monitoring and Analytics App.
+This section provides instructions for configuring log collection for the Windows - Cloud Security Monitoring and Analytics app.
 
 ## Log types
-## Log types
 
-The Windows - Cloud Security Monitoring and Analytics App uses Windows Security Event and System Event logs. It does not work with third-party logs.
+The **Windows - Cloud Security Monitoring and Analytics** app uses Windows Security Event and System Event logs. It does not work with third-party logs.
 
-### Sample log messages
 ### Sample log messages
 
 ```json
@@ -95,7 +93,9 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Windows Cloud Security dashboards​
 
-{@import ../../reuse/filter-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Security Monitoring - Inventory
 
@@ -153,7 +153,6 @@ The **Windows - Security Analytics - User Authentication** dashboard points to s
 
 <img src={useBaseUrl('img/integrations/cloud-security-monitoring-analytics/Windows-Security-Analytics-User-Authentication.png')} alt="Windows cloud Security Analytics dashboards" />
 
-
 ### Security Analytics - User Account Changes
 
 The **Windows - Security Analytics - User Account Changes** dashboard shows user accounts created, deleted, locked out, as well as password changes for a given account.
@@ -162,7 +161,6 @@ The **Windows - Security Analytics - User Account Changes** dashboard shows user
 
 <img src={useBaseUrl('img/integrations/cloud-security-monitoring-analytics/Windows-Security-Analytics-User-Account-Changes.png')} alt="Windows cloud Security Analytics dashboards" />
 
-
 ### Security Analytics - TLS Certificates and Secure Channels
 
 The **Windows - Security Analytics - TLS Certificates and Secure Channels** dashboard indicates TLS Certificate and Secure Channel activity and associated computers, trends, and latest events.
@@ -170,7 +168,6 @@ The **Windows - Security Analytics - TLS Certificates and Secure Channels** dash
 **Use case:** By mapping changes in certificates and associated trends, teams can identify areas of improvement for current TLS Certificate deployments.
 
 <img src={useBaseUrl('img/integrations/cloud-security-monitoring-analytics/Windows-Security-Analytics-TLS-Certificates-and-Secure-Channels.png')} alt="Windows cloud Security Analytics dashboards" />
-
 
 ### Security Analytics - Default Accounts Usage
 

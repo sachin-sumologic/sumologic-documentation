@@ -15,8 +15,6 @@ Okta provides secure connections between people and your applications on any dev
 
 The Sumo Logic Collector uses Okta System Log API to get the logs of Okta System. The log types include authentication, events, and actions. For more information on the Okta log API, see [here](https://developer.okta.com/docs/api/resources/system_log.html).
 
-
-### Sample log message
 ### Sample log message
 
 <details>
@@ -137,8 +135,6 @@ The Sumo Logic Collector uses Okta System Log API to get the logs of Okta System
 
 </details>
 
-
-### Sample queries
 ### Sample queries
 
 ```sql title="Details of Applications Deleted"
@@ -185,7 +181,6 @@ _sourceCategory = "okta" "user.mfa.factor.deactivate"
 | count by okta_user_id, actor, outcome_result, country, state
 ```
 
-
 ## Configuring Okta Log Collection
 
 Use the [new Cloud-to-Cloud Integration for Okta](/docs/send-data/hosted-collectors/cloud-to-cloud-integration-framework/okta-source.md) to create the source and use the same source category while installing the app.
@@ -196,16 +191,15 @@ The Okta Log Collection configuration via SumoJanus is no longer applicable and 
 
 ## Installing the Okta app
 
-{@import ../../reuse/apps/app-install-v2.md}
-
-## Viewing Okta dashboards​
-
 import AppInstall from '../../reuse/apps/app-install.md';
 
 <AppInstall/>
 
-## Viewing Okta Dashboards
+## Viewing Okta dashboards
 
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Administrative Actions
 
@@ -230,7 +224,6 @@ Shows the details of administrative actions such as the geolocation of applicati
 **Connect AD Agent to Okta.** See the details of connect AD agent to Okta such as the Okta user ID, outcome result, display message, and count, in the last 24 hours.
 
 <img src={useBaseUrl('img/integrations/saml/Okta-AdministrativeActions.png')} alt="Okta-AdministrativeActions" />
-
 
 ### Application Access
 

@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('img/integrations/hosts-operating-systems/linux-transparent.png')} alt="Thumbnail icon" width="45"/>
 
-The Sumo app for Linux allows you to view information about events, logins, and the security status of your Linux system. The app consists of predefined searches and three dashboards that provide visibility into your environment for real-time or historical analysis.
+The Sumo Logic app for Linux allows you to view information about events, logins, and the security status of your Linux system. The app consists of predefined searches and three dashboards that provide visibility into your environment for real-time or historical analysis.
 
 :::note
 You may also be interested in the [Sumo Logic App for Linux Cloud Security Monitoring and Analytics](docs/integrations/cloud-security-monitoring-analytics/linux.md).
@@ -47,7 +47,6 @@ Configure an [Installed Collector](/docs/send-data/installed-collectors).
 To configure a source for collecting Linux logs, you create a Local File Source. Following the instructions on [Local File Source](/docs/send-data/installed-collectors/sources/local-file-source). When you define a Source Category for the source, we recommend something like: `prod/os/linux`. For more information about Source Categories, see [Best Practices](/docs/send-data/best-practices).
 
 ### Sample log messages
-### Sample log messages
 
 ```bash
 Dec 16 20:26:23 ubuntu sshd[15533]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=116.31.116.50  user=root
@@ -58,21 +57,20 @@ Dec 16 20:26:23 ubuntu sshd[15533]: pam_unix(sshd:auth): authentication failure;
 ```
 
 ### Sample queries
-### Sample queries
 
 See [Suggested Searches for Linux OS](#suggested-searches-for-linux-os).
 
-
 ## Installing the Linux app
-
-{@import ../../reuse/apps/app-install-v2.md}
 
 import AppInstall from '../../reuse/apps/app-install.md';
 
 <AppInstall/>
+
 ## Viewing Linux dashboards​
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 
@@ -146,8 +144,7 @@ _sourceCategory=OS/Linux* ("su:" or "sudo:" or "sshd:" or "sshd[" or "pam:") (("
 
 Returns all failed authentication attempts by either a user or a process. Suggested time range: -1 day.
 
-
-```
+```sql
 _sourceCategory=*linux* ("authentication failure" or "FAILED SU" or "input_userauth_request: invalid user" or "Invalid user" or "Failed publickey" or "Failed password")
 | parse regex "\d+\s+\d+:\d+:\d+\s(?<dest_hostname>\S+)\s(?<process_name>\w*)(?:\[|:)" nodrop
 | parse " user = * " as dest_user nodrop
@@ -172,8 +169,6 @@ _sourceCategory=*linux* ("authentication failure" or "FAILED SU" or "input_usera
 | if (src_host=" " or isEmpty(src_host), _sourceHost, src_host) as src_host | src_host as src_ip
 ```
 
-
-
 #### Root Activities
 
 Returns all sudo/su attempts, or activities by "root" user. Modify to include other privileged users that you want to track in your environment.
@@ -187,12 +182,9 @@ _​sourceCategory=OS/Linux/Security ("sudo" or "root" or "su")
 | where command !="" or dest_user in ("root") or src_user in ("root")
 ```
 
-
-
 #### Failed SU attempts
 
 Returns all failed SU attempts.
-
 
 ```bash
 _sourceCategory=*linux*("authentication failure" or "FAILED SU" or "input_userauth_request: invalid user" or "Invalid user" or "Failed publickey" or "Failed password") ("su:" or "su[")  
@@ -217,7 +209,6 @@ _sourceCategory=*linux*("authentication failure" or "FAILED SU" or "input_userau
 | where dest_user!="" and src_user!=""
 | count as attempts by dest_hostname, src_user, dest_user | sort - attempts
 ```
-
 
 ### Security Activity Monitoring
 
@@ -247,7 +238,6 @@ _​sourceCategory=OS/Linux/S* "new group"
 | parse "group=*, gid=*," as dest_group,dest_gid nodrop
 ```
 
-
 #### Existing users added to privileged groups
 
 Returns all messages that indicate a user being added to an administrative group. **Modify this query to include the IDs or names of the administrative groups in your environment.**
@@ -264,7 +254,6 @@ _sourceCategory=OS/Linux/S* "to group" or "default group changed" or "change use
 | where dest_gid in("10","0","4") or dest_group in ("root", "wheel", "adm")
 ```
 
-
 #### Failed Password Changes
 
 Returns all failed attempts to change a user password.
@@ -279,7 +268,6 @@ _sourceCategory=OS/Linux/* "Authentication failure"
 | where process_name="passwd"
 ```
 
-
 #### System Start
 
 Returns all incidents when the system starts (or restarts).
@@ -290,7 +278,6 @@ Suggested time range: -1 day
 _sourceCategory=OS/Linux/System "Initializing cgroup subsys cpuset"
 | parse regex "^(?<StartTime>\S*\s+\d+\s+\d+:\d+:\d+)\s(?<dest_hostname>\S*)\s(?<process_name>\w*)(?:\[\d+\]|):\s+" nodrop
 ```
-
 
 #### Service Shutdown/Exiting
 

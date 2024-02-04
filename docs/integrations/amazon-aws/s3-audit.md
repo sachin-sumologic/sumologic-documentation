@@ -25,14 +25,12 @@ The server access log files consist of a sequence of new-line delimited log reco
 ```
 
 ### Sample query
-### Sample queries
 
 ```sql
 | parse "* * [*] * * * * * \"* HTTP/1.1\" * * * * * * * \"*\" *" as bucket_owner, bucket, time, remoteIP, requester, request_ID, operation, key, request_URI, status_code, error_code, bytes_sent, object_size, total_time, turn_time, referrer, user_agent, version_ID
 | parse regex field=operation "[A-Z]+\.(?<operation>[\w.]+)"
 | count by operation
 ```
-
 
 ## Collecting Logs for the Amazon S3 Audit app
 
@@ -41,7 +39,6 @@ Amazon Simple Storage Service (S3) provides a simple web services interface that
 This topic details how to collect logs for Amazon S3 Audit and ingest them into Sumo Logic.
 
 Once you begin uploading data, your daily data usage will increase. It's a good idea to check the Account page in  Sumo Logic to make sure that you have enough quota to accommodate additional data in your account. If you need additional quota you can [upgrade your account](/docs/manage/manage-subscription/upgrade-cloud-flex-account.md) at any time.
-
 
 ### Before you begin
 
@@ -83,9 +80,9 @@ import AppInstall from '../../reuse/apps/app-install-v2.md';
 
 ## Viewing Amazon S3 Audit dashboards
 
-## Viewing Amazon S3 Audit dashboards
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
 
-{@import ../../reuse/apps/view-dashboards.md}
+<ViewDashboards/>
 
 ### Overview
 
@@ -100,7 +97,6 @@ This dashboard provides the geolocation of S3 operations, requests performed, da
 **Data Volume Sent in MB by S3 Bucket.** Shows the data volume per S3 bucket in megabytes, displayed in an bar chart for the last three hours.
 
 **Total Requests by S3 Bucket.** Shows the total requests per S3 bucket, displayed in an bar chart for the last three hours.
-
 
 ### Details
 

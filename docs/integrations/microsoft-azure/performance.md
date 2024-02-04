@@ -12,7 +12,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 The Windows Performance App provides insight into your system's operation and events so that you can better manage and maintain your Windows systems. The App uses predefined Dashboards and searches that provide visibility into your environment for real-time analysis of system and network performance and overall usage.
 
 ## Log types
-## Log types
 
 The Windows Performance App assumes events are coming from Windows Performance Sources.
 
@@ -132,7 +131,6 @@ To collect logs for the Windows Performance App, do the following:
     * [Local Windows Performance Monitor Log Source](/docs/send-data/installed-collectors/sources/local-windows-performance-monitor-log-source).
     * [Remote Windows Performance Monitor Log Source](/docs/send-data/installed-collectors/sources/remote-windows-performance-monitor-log-source).
 
-
 ### Add a Custom Query to the Windows Performance Source
 
 To complete the configuration, you'll need to edit each Windows Performance Source (you are using to collect logs) to add a custom query.
@@ -150,7 +148,6 @@ To complete the configuration, you'll need to edit each Windows Performance Sour
     * For **Query**, enter **select * from Win32_PerfFormattedData_PerfProc_Process**.
 6. Click **Save**.
 
-
 ## Installing the Windows Performance app
 
 import AppInstall from '../../reuse/apps/app-install.md';
@@ -159,9 +156,11 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Windows Performance dashboards​
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
 
-### Windows Performance Overview
+<ViewDashboards/>
+
+### Overview
 
 <img src={useBaseUrl('https://sumologic-app-data-v2.s3.amazonaws.com/dashboards/Windows-Performance/Windows-Performance-Overview.png')} alt="Windows Performance Overview" />
 

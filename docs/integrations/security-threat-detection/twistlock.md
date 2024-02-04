@@ -13,13 +13,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The Sumo Logic App for Twistlock provides a comprehensive monitoring and analysis solution for detecting vulnerabilities and potential threats within your Kubernetes and containerized environments.
 
-
-## Log Types
+## Log types
 
 The Twistlock Apps work on logs from:
 
-* Twistlock Console. Console logs typically include image scan, host scan, container scan, registry scan, scan summary, management audits, compliance violations, and vulnerability issues events.
-* Twistlock Defender. Defender logs typically include container/host runtime audits, process activity audits, and incident events
+* **Twistlock Console**. Console logs typically include image scan, host scan, container scan, registry scan, scan summary, management audits, compliance violations, and vulnerability issues events.
+* **Twistlock Defender**. Defender logs typically include container/host runtime audits, process activity audits, and incident events
 
 For more information on Twistlock events, refer to the [Twistlock Documentation](https://docs.twistlock.com/docs/latest/audit/logging.html#events).
 
@@ -34,7 +33,6 @@ This section provides instructions for configuring log collection for the Sumo L
 * Configure a Sumo Logic syslog source
 * Send Twistlock logs to Sumo Logic
 
-
 ### Step 1. Configure a Sumo Logic syslog source
 
 In this step you configure an installed collector with a Syslog source that will act as Syslog server to receive logs and events from Twistlock.
@@ -48,7 +46,6 @@ In this step you configure an installed collector with a Syslog source that will
    5. **Source Category**. (Required) Provide a Source Category for this data type. For example: **prod/twistlock**. For more information, see [Best Practices](/docs/send-data/best-practices).
 1. For Kubernetes customers, we recommend adding a [custom field](/docs/manage/fields) to the Syslog Source so you can reference it in the [Sumo Explorer view](/docs/observability/kubernetes). Each field contains a key-value pair, where the field name is the key. To add a field click the **+Add Field** link in the **Fields** section. You could add a field named **cluster** where you set the name of the cluster to tag to the logs. For example, **cluster** = **k8s.dev.sumo.sumologic.net**.
 1. Click **Save**.
-
 
 ### Step 2: Send Twistlock logs to Sumo Logic
 
@@ -87,13 +84,11 @@ image_name="registry-auth.twistlock.com/tw_blm0yiaqqwvgimnirx1x0iczg9xoslag/twis
 compliance="0"
 ```
 
-
 ### Sample query
-
 
 The following query sample is from the **Vulnerability Scan Events by Severity** panel in the **Twistlock - Overview** dashboard.
 
-```
+```sql
 _sourceCategory=*Twistlock* type log_type *scan* vulnerability severity
 | parse regex "\s+(?<component>Twistlock-Console|Twistlock-Defender?)\s*.*\s*time=\"" nodrop
 | parse "type=\"*\"" as type nodrop | parse "log_type=\"*\"" as log_type nodrop | parse "severity=\"*\""
@@ -107,7 +102,7 @@ as container_name nodrop | parse "cve=\"*\"" as cve nodrop | parse "vendor_statu
 | transpose row _timeslice column severity
 ```
 
-## Installing the Twistlock qpp
+## Installing the Twistlock app
 
 This section provides instructions on how to install the Twistlock App, as well as examples of each of the dashboards. The App pre-configured searches and dashboards provide easy-to-access visual insights into your data.
 
@@ -117,7 +112,9 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Twistlock dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 
@@ -128,7 +125,6 @@ Use this dashboard to:
 * Quickly understand and remediate vulnerabilities on hosts and images.
 * Understand which CVEs have fixes available and use that information to triage and remediate vulnerabilities.
 * Monitor trends for vulnerabilities and compliance issues detected.
-
 
 <img src={useBaseUrl('img/integrations/security-threat-detection/Twistlock-overview.png')} alt="Twistlock Dashboard" />
 
@@ -198,15 +194,15 @@ Use this dashboard to:
 
 ## Installing the Twistlock Classic app
 
+import appInstall from '../../reuse/apps/app-install.md';
+
 <AppInstall/>
 
-## Viewing Twistlock Classic Dashboards
+## Viewing Twistlock Classic dashboards
 
-### Filter with template variables    
+import viewdashboards from '../../reuse/apps/view-dashboards.md';
 
-Template variables provide dynamic dashboards that rescope data on the fly. As you apply variables to troubleshoot through your dashboard, you can view dynamic changes to the data for a fast resolution to the root cause. For more information, see the [Filter with template variables](/docs/dashboards/filter-template-variables.md) help page.
-
-You can use template variables to drill down and examine the data on a granular level.
+<ViewDashboards/>
 
 ### Overview
 

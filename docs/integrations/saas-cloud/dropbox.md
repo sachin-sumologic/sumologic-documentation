@@ -23,7 +23,6 @@ The Dropbox App for Sumo Logic offers several useful features:
 To help you get started quickly, the app provides pre-built dashboards and searches that display important Dropbox usage metrics like top users, file access patterns, and shared files. In summary, the Dropbox App for Sumo Logic provides you with the necessary tools to monitor and analyze your organization's Dropbox usage data, giving you valuable insights into user behavior and potential security risks.
 
 ## Log types
-## Log types
 
 The Dropbox App for Sumo Logic uses [Team events from Dropbox](https://www.dropbox.com/developers/documentation/http/teams#team_log-get_events) to generate logs that can be used for monitoring and analysis. To access more information about the specific fields for the v2 version of Dropbox events, refer to the [Migration guide](https://www.dropbox.com/developers/reference/events-migration-guide), which provides a comprehensive list of available log types.
 
@@ -125,22 +124,24 @@ import AppInstall from '../../reuse/apps/app-install.md';
 
 ## Viewing Dropbox dashboards
 
-{@import ../../reuse/apps/view-dashboards.md}
+import ViewDashboards from '../../reuse/apps/view-dashboards.md';
+
+<ViewDashboards/>
 
 ### Overview
 
-**Dropbox - Overview** dashboard provides valuable insights on the activities of active members, uniquely linked applications, and login events. It also offers a summary of user agent activity, analyzes the distribution of all event categories within Dropbox, displays the geolocations of all events, identifies the most frequent event types within important event categories, and tracks recently added team members.
+The **Dropbox - Overview** dashboard provides valuable insights on the activities of active members, uniquely linked applications, and login events. It also offers a summary of user agent activity, analyzes the distribution of all event categories within Dropbox, displays the geolocations of all events, identifies the most frequent event types within important event categories, and tracks recently added team members.
 
 Moreover, the dashboard provides an overview of all events related to internal and external sharing within the team, including the sharing of files and folders with external domains. Overall, this dashboard offers comprehensive information about the team's activity and facilitates efficient monitoring of various important events.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-overview.png')} alt="dropbox-overview.png" width="900"/>
 
 ### File Statistics
 
-**Dropbox - File Statistics** dashboard offers visibility into team members' file operations, including the most frequent file operations, geolocations of file operations, linked apps, and user activity. Additionally, it displays recent file operations along with associated assets.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-file-statistics.png')} alt="dropbox-file-statistics" width="900"/>
+The **Dropbox - File Statistics** dashboard offers visibility into team members' file operations, including the most frequent file operations, geolocations of file operations, linked apps, and user activity. Additionally, it displays recent file operations along with associated assets.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-file-statistics.png')} alt="dropbox-file-statistics" width="900"/>
 
 ### Logins, Devices & Sessions
 
-**Dropbox - Logins, Devices & Sessions** dashboard provides visibility into login geolocations, including risky countries, and displays a table view of successful device links. It also presents the distribution of team-linked and user-linked apps. Additionally, the dashboard lists users with frequent device IP changes and frequent failed login attempts to monitor for potential breaches.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-logins-devices-sessions.png')} alt="dropbox-logins-devices-sessions" width="900"/>
+The **Dropbox - Logins, Devices & Sessions** dashboard provides visibility into login geolocations, including risky countries, and displays a table view of successful device links. It also presents the distribution of team-linked and user-linked apps. Additionally, the dashboard lists users with frequent device IP changes and frequent failed login attempts to monitor for potential breaches.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-logins-devices-sessions.png')} alt="dropbox-logins-devices-sessions" width="900"/>
 
 ### Team Admin Actions
 
-**Dropbox - Team Admin Actions** dashboard displays the most frequent actions performed by administrators and provides a table view of the top active admins along with their respective countries. It also shows all recent admin activities for easy monitoring.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-team-admin-actions.png')} alt="dropbox-team-admin-actions" width="900"/>
+The **Dropbox - Team Admin Actions** dashboard displays the most frequent actions performed by administrators and provides a table view of the top active admins along with their respective countries. It also shows all recent admin activities for easy monitoring.<br/><img src={useBaseUrl('img/integrations/saas-cloud/dropbox-team-admin-actions.png')} alt="dropbox-team-admin-actions" width="900"/>
