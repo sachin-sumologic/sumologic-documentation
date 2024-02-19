@@ -44,7 +44,7 @@ The screenshot below shows the Root Cause Explorer UI.
 
 ![rce-top-entities.png](/img/rce/rce-top-entities.png)
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level                                  |
 |:--------------|:------------------------------------------------|

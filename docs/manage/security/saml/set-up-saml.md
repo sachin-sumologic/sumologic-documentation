@@ -6,7 +6,7 @@ description: Enable Single Sign-On (SSO) for user access to Sumo Logic.
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--|:--|

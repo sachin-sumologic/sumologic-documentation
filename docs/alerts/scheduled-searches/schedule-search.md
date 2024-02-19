@@ -1,15 +1,13 @@
 ---
 id: schedule-search
 title: Schedule a Search
-sidebar_label: Get Started
+sidebar_label: Overview
 description: When you save a search, you can add a schedule to run it at a regularly scheduled time, and add alerts.
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-When you save a search, you can add a schedule to run it at a regularly scheduled time, and add alerts. For alert types, see [Scheduled Searches](/docs/alerts/scheduled-searches). 
-
-To run the scheduled search using receipt time save the search with receipt time enabled.
+When you save a search, you can add a schedule to run it at a regularly scheduled time, and add alerts. To run the scheduled search using receipt time, save the search with receipt time enabled.
 
 :::note
 Scheduled searches with a **Real Time** run frequency do not support the **Use Receipt Time** option.

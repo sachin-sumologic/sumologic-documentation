@@ -10,7 +10,7 @@ Ingest budgets automatically reset their capacity utilization tracking every 24
 
 An ingest budget's capacity usage is logged in the Audit Index when the audit threshold is reached and continues to be logged until the budget is reset. To track and schedule alerts on ingest budget capacity-usage and resets see [audit ingest budgets](#audit-index-budgets).
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:--------------------------------------|

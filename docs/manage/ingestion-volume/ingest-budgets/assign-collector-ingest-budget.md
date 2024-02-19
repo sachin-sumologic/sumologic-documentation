@@ -5,7 +5,7 @@ description: Learn how to assign a Collector to an ingest budget.
 ---
 
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--|:--|

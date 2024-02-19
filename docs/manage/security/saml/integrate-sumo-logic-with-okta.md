@@ -4,7 +4,7 @@ title: Integrate Sumo Logic with Okta
 description: You can integrate Sumo Logic's SAML 2.0 API with Okta to allow users to log into Sumo Logic using their Single Sign-On (SSO) credentials.
 ---
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:---------------------------------------------------------------------------------|

@@ -5,7 +5,7 @@ sidebar_label: View AWS Dashboards
 description: Learn how to use Explore to navigate your AWS Observability infrastructure, as well as providing links to the app dashboards.
 ---
 
-## Availability
+## Prerequisites
 
 This feature is available in the following account plans.
 

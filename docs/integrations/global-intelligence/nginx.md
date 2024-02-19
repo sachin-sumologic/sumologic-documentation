@@ -5,7 +5,7 @@ sidebar_label: Global Intelligence for Nginx
 description: The Global Intelligence for Nginx app provides you with information regarding Golden Signals and Visitor Benchmarks for your company's Nginx servers, and compares them to all servers from all customers.
 ---
 
-## Availability
+## Prerequisites
 
 This feature is available in the following account plans.
 

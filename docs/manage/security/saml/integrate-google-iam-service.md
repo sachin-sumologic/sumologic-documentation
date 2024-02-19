@@ -4,7 +4,7 @@ title: Integrate Sumo Logic with Google Apps (G Suite) IAM
 description: Using SAML, you can use your Google Apps credentials to log into Sumo Logic via SSO.
 ---
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level                                                                   |
 |:--------------|:---------------------------------------------------------------------------------|

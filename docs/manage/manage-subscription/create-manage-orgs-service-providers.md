@@ -6,7 +6,7 @@ description: For Sumo Logic Service Providers, Sumo Orgs eases the process of pr
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:--------------------------------------------------------------|

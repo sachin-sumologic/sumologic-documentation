@@ -111,7 +111,7 @@ Systems and services include numerous errors beyond web errors, including custom
 Throughput is the amount of processing time by a service or system. Depending on the type of data and service, a data processing system may require more time to process. Bytes per second is a common measurement for processing, and tracking these SLIs can indicate a need for data processing partitions, more support and processors, and so on.
 
 
-#### Availability
+#### Prerequisites
 
 Availability indicates if a service is working and handling valid requests. Other systems, services, and even virtual storage all have potential metrics to track with SLIs. The other option gives you the ability to include different SLOs based on your specific business needs.
 

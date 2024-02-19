@@ -10,7 +10,7 @@ keywords:
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------------|:--------------------------------------------------------------|

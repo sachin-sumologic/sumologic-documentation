@@ -8,7 +8,7 @@ The Search Audit Index provides event logs on search usage and activities for yo
 
 To visualize your Search Audit Index data, download the [Enterprise Search Audit App](/docs/integrations/sumo-apps/enterprise-search-audit), which provides pre-built dashboards and reports to help you analyze your current search use and identify areas for improvement.
 
-## Availability
+## Prerequisites
 
 This feature is available in the following account plans.
 

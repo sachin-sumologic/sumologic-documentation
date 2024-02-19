@@ -4,61 +4,66 @@ title: Health Events
 description: Monitor the health of your Collectors and Sources.
 ---
 
-## Availability
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-| Account Type | Account Level |
-|:--------------|:---------------------------------------------------------------------------------|
-| CloudFlex | Professional, Enterprise |
-| Credits | Trial, Essentials, Enterprise Operations, Enterprise Security, Enterprise Suite |
-
-Health events allow you to keep track of the health of your Collectors, Sources, and Ingest Budgets. You can use them to find and investigate common errors and warnings that are known to cause collection issues. 
+Sumo Logic Health Events provide insights into the overall health and status of your Sumo Logic environment (e.g., Collectors, Sources, and Ingest Budgets) and detect various issues and errors. You can then use these insights to investigate common errors and warnings that are known to cause collection issues.
 
 This framework includes the following:
 
-* Health event logs indexed in the [Audit Event Index](/docs/manage/security/audit-indexes/audit-event-index).
-* A [health events table](#health-events-table) on the Alerts page.
-* A health status column on the [Collection page](#collection-page).
+* Health event logs indexed in the [Audit Event Index](#audit-event-index).
+* [**Health Events** table](#health-events-table) on the Alerts page.
+* Health status column on the [**Collection** page](#collection-page).
 
-Health events are sent from Installed Collectors on version 19.308-2 and
-later.
+## Prerequisites
+
+This feature is available in the following account plans:
+
+| Account Type | Account Level |
+|:-------------|:-------------|
+| CloudFlex | Professional, Enterprise |
+| Credits | Trial, Essentials, Enterprise Operations, Enterprise Security, Enterprise Suite |
+
+Health events are sent from [Installed Collectors](/docs/send-data/installed-collectors) on version 19.308-2 and later.
+
+## Audit Event Index
+
+A health event is created when an issue is detected with a Collector or Source. Events are indexed and searchable in a separate partition named **sumologic_system_events** in the [Audit Event Index](/docs/manage/security/audit-indexes/audit-event-index.md). To learn what information is available in a health event, see [Common parameters](#common-parameters).
+
+The [Audit Event Index](/docs/manage/security/audit-indexes/audit-event-index.md) lists all possible Health Events.
 
 ## Alerts
 
-Alerts for specific health events are easy to create in the Health Events Table. The details pane of an event provides a **Create Scheduled Search** button to automatically generate the required query.
+Alerts for specific health events are easy to create in the **Health Events** table.
 
-## Health events
+### Health Events table
 
-Health events are created when an issue is detected with a Collector or Source. Events are indexed and searchable in a separate partition named **sumologic_system_events** in the [Audit Event Index](/docs/manage/security/audit-indexes/audit-event-index.md). For details on what information is available in a health event, see the [common parameters](#common-parameters) table.
+The **Health Events** table allows you to easily view and investigate problems getting your data to Sumo. You can search, filter, and sort incidents by key aspects like severity, resource name, event name, resource type, and opened since date.
 
-The [Audit Event Index](/docs/manage/security/audit-indexes/audit-event-index.md) lists all of the possible Health Events.
+1. To access the **Health Events** table, go to **Manage Data** > **Monitoring** > **Health Events**.
+1. Click on a row to view the details of a health event.<br/>![health events table.png](/img/health-events/health-events-table.png)
+1. Click the **Create Scheduled Search** button on the details pane to get alerts for specific health events and automatically generate the required query. The unique identifier of the resource, such as the Source or Collector, is used in the query. See [Schedule a Search](../alerts/scheduled-searches/schedule-search.md) for details.<br/>  <img src={useBaseUrl('img/health-events/health-event-detail.png')} alt="img/health-events/health-event-detail.png" width="300"/><br/>
+   Under the **More Actions** menu, you can select:
+    * **Event History** to run a search against the `sumologic_system_events` partition to view all of the related event logs.
+    * **View Object** to view the Collector or Source in the [**Collection** page](#collection-page) related to the event.
 
-### Health events table
 
-The health events table allows you to easily view and investigate problems getting your data to Sumo.
+## Collection page
 
-On the health events table, you can search, filter, and sort incidents by key aspects like severity, resource name, event name, resource type, and opened since date.
+To get to the [**Collection** page](/docs/send-data/collection), go to The **Health** column on the  shows color-coded healthy, error, and warning states for Collectors and Sources so you can quickly determine the health of your Collectors and Sources.
 
-The health events table is at **Manage Data** > **Monitoring** > **Health Events**.
+The **Status** column shows the status of Sources manually paused by users.<br/>![Collection health column.png](/img/health-events/Collection-health-column.png)
+* Hover your mouse over a Collector or Source to view a tooltip that provides the number of health events detected on the Collector or Source.<br/>![health tooltip.png](/img/health-events/health_tooltip.png)
+* Click on the **Health** status in a row to view a pop-up displaying a list of related events.<br/>![object event details.png](/img/health-events/object_event_details.png)
 
-![health events table.png](/img/health-events/health-events-table.png)
 
-Click on a row to view the details of a health event.
+## Health events severity
 
-![health event detail.png](/img/health-events/health-event-detail.png)
+Health events are categorized by two severity levels: warning and error. The **Severity** column has color-coded error and warning events so you can quickly determine the seriousness of a given issue.
 
-Click the **Create Scheduled Search** button on the details pane to get alerts for specific health events. The unique identifier of the resource, such as the Source or Collector, is used in the query. See [Schedule a Search](../alerts/scheduled-searches/schedule-search.md) for details.
+* ![warning label.png](/img/health-events/warning-label.png) **Warning** means that the Collector or Source has a configuration issue or is operating in a degraded state.
+* ![Error label.png](/img/health-events/Error-label.png) **Error** means that the Collector or Source is unable to collect data as expected.
 
-Under the **More Actions** menu you can select:
-
-* **Event History** to run a search against the **sumologic_system_events** partition to view all of the related event logs.
-* **View Object** to view the Collector or Source in the Collection page related to the event.
-
-### Health events severity
-
-Events are categorized by two severity levels, warning and error. The severity column has color-coded error and warning events so you can quickly determine the severity of a given issue.
-
-* ![warning label.png](/img/health-events/warning-label.png) A warning indicates the Collector or Source has a configuration issue or is operating in a degraded state.
-* ![Error label.png](/img/health-events/Error-label.png) An error indicates the Collector or Source is unable to collect data as expected.
+## Health event logs
 
 ### Common parameters
 
@@ -81,7 +86,7 @@ common parameters in the order that they are found in health event logs.
 | subsystem | The product area of the event. | String |
 | resourceIdentity | This includes any unique identifiers, names, and the type of the object associated with the event. | JSON object of Strings |
 
-### Health event log example
+### Example config
 
 ```json
 {
@@ -109,6 +114,7 @@ common parameters in the order that they are found in health event logs.
 }
 ```
 
+
 ## Search health events
 
 To search all health events run a query against the internal partition
@@ -131,19 +137,3 @@ Creating a query that defines built-in metadata field values in the scope can he
 | _sourceCategory | Value of the [common parameter](#common-parameters), `subsystem`. |
 | _sourceName | Value of the [common parameter](#common-parameters), `eventName`. |
 | _sourceHost | The remote IP address of the host that made the request. If not available the value will be `no_sourceHost`. |
-
-### Collection page
-
-A **Health** column on the Collection page shows color-coded healthy, error, and warning states for Collectors and Sources so you can quickly determine the health of your Collectors and Sources.
-
-The **status** column now shows the status of Sources manually paused by users.
-
-![Collection health column.png](/img/health-events/Collection-health-column.png)
-
-* Hover your mouse over a Collector or Source to view a tooltip that provides the number of health events detected on the Collector or Source.
-
-    ![health tooltip.png](/img/health-events/health_tooltip.png)
-
-* Click on the **Health** status in a row to view a pop-up displaying a list of related events.
-
-    ![object event details.png](/img/health-events/object_event_details.png)

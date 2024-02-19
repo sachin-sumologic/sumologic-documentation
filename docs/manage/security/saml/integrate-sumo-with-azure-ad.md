@@ -6,7 +6,7 @@ description: Enable Single Sign-On (SSO) to Sumo Logic with Azure Active Directo
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:-------------------------|

@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 If you are a Sumo Logic Service Provider, see [Create and Manage Orgs (Service Providers)](create-manage-orgs-service-providers.md).
 :::
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:--------------------------------------------------------------|

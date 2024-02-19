@@ -5,7 +5,7 @@ description: Learn how to configure  AWS Single Sign-On for Sumo Logic.
 ---
 
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:---------------------------------------------------------------------|

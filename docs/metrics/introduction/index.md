@@ -8,7 +8,7 @@ description: Sumo Logic Metrics is an effective tool for monitoring, troubleshoo
 Metrics are an effective tool for monitoring, troubleshooting, and identifying the root causes of problems. This page is a high-level overview of metrics in Sumo Logic and the terminology we use to talk about metrics.
 
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level       |
 |:--------------|:--------------------------|

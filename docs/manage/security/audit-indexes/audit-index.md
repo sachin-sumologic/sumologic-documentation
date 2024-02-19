@@ -4,7 +4,7 @@ title: Audit Index
 description: Provides information on the internal events that occur in Sumo Logic.
 ---
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level |
 |:--------------|:---------------------------------------------------------------------------------|

@@ -40,7 +40,7 @@ See Real User Monitoring in action.
 
 :::
 
-## What You'll Need
+## Prerequisites
 
 | Account Type | Account Level |
 |:--|:--|

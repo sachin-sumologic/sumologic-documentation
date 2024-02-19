@@ -4,7 +4,7 @@ title: Ingest Budgets Quickstart Tutorial
 description: Learn how to create and use Ingest Budgets.
 ---
 
-## Availability
+## Prerequisites
 
 | Account Type | Account Level|
 |:--|:--|
