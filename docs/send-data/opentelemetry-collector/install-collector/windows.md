@@ -66,13 +66,16 @@ The script is going to perform the following operations:
 
 #### Script Options
 
-| Name           | Description      | Takes Value          |
-|:---------------|:----------------|:-------------|
-| `-InstallationToken` | Installation token      | Yes       |
-| `-Tags`         | Sets tags for collector. This argument should be a map. | Yes, for example `@{"host.group" = "default"; "deployment.environment" = "default"}` |
-| `-InstallHostMetrics` | Installs the hostmetrics configuration to collect host metrics. The default is `$False`. | Yes, for example: `-InstallHostMetrics $True` or `-InstallHostMetrics $False`. |
-| `-Fips` | If set to `$True`, installs the FIPS-compliant binary. The default is `$False`. See [FIPS](#fips) section for more details. | Yes, for example: `-Fips $True` or `-Fips $False` |
-| `-Version` | Version of Sumo Logic Distribution for OpenTelemetry Collector to install. By default, it gets latest version. | Yes, for example: `-Version 0.94.0-sumo-2` |
+| Name                  | Description                                                                                                                 | Takes Value                                                                          |
+|:----------------------|:----------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
+| `-InstallationToken`  | Installation token                                                                                                          | Yes                                                                                  |
+| `-Tags`               | Sets tags for collector. This argument should be a map.                                                                     | Yes, for example `@{"host.group" = "default"; "deployment.environment" = "default"}` |
+| `-InstallHostMetrics` | Installs the hostmetrics configuration to collect host metrics. The default is `$False`.                                    | Yes, for example: `-InstallHostMetrics $True` or `-InstallHostMetrics $False`.       |
+| `-Fips`               | If set to `$True`, installs the FIPS-compliant binary. The default is `$False`. See [FIPS](#fips) section for more details. | Yes, for example: `-Fips $True` or `-Fips $False`                                    |
+| `-Version`            | Version of Sumo Logic Distribution for OpenTelemetry Collector to install. By default, it gets latest version.              | Yes, for example: `-Version 0.94.0-sumo-2`                                           |
+| `-Ephemeral`          | Automatically deletes the collector after 12 hours of offline time. The default is `$False`.                                | Yes, for example: `-Ephemeral $True` or `-Ephemeral $False`                          |
+| `-RemotelyManaged`    | The collector is remotetly configured and managed using the OpenTelemetry OpAmp protocol. The default is `$False`.          | Yes, for example: `-RemotelyManaged $True` or `-RemotelyManaged $False`              |
+| `-Api`                | The URL to access the SumoLogic API if different than the default.                                                          | Yes, for example: `-Api https://api.sumologic.com/api/v1/`                           |
 
 ### Manual Step-by-Step Installation
 
