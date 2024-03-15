@@ -16,6 +16,14 @@ The Continuous Data Tier is available in all Sumo subscriptions. Frequent and In
 
 No. Infrequent Tier is only available to customers who have [Sumo Logic Credits](/docs/manage/manage-subscription/sumo-logic-credits-accounts) packaging.  
 
+## How to choose between Frequent and Infrequent tier?
+
+Choosing between Frequent and Infrequent for a data set depends on how frequently you need to access the data. If you expect to search the data often, the Frequent Tier, with its predictable upfront pricing model, is appropriate. Data that you expect to access less often is an ideal candidate for the Infrequent Tier, which offers low ingest cost, and competitive on-demand search pricing.
+
+For example, for a large development team with hundreds of developers, it is better to send development and test logs to the Frequent Tier if your developers are going to access it often during development. 
+
+In contrast, debug or other verbose log sources that are only used to troubleshoot very specific issues that occur infrequently, for example, only a couple of times a week, are better off in the Infrequent Tier to keep the cost of ownership low.  
+
 ## Can I restrict access to Infrequent or Frequent data to select users?
 
 You can use [Role-Based Access Control (RBAC)](/docs/manage/users-roles/roles/role-based-access-control) to restrict access to partitions in the Infrequent or Frequent Tiers. Although you can’t use a role search filter to restrict access to a partition by name, you can filter by the metadata that forms the routing expression for a partition. 
