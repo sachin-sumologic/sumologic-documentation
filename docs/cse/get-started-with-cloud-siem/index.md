@@ -11,6 +11,12 @@ This guide helps you get started using Cloud SIEM for threat hunting.
 <div className="box-wrapper">
 <div className="box smallbox card">
   <div className="container">
+  <a href="/docs/cse/get-started-with-cloud-siem/onboarding-checklist-cse"><img src={useBaseUrl('img/icons/security/compliance.png')} alt="icon" width="40"/><h4>Cloud SIEM Onboarding Checklist</h4></a>
+  <p>Get up and running quickly with Cloud SIEM administrator tasks.</p>
+  </div>
+</div>
+<div className="box smallbox card">
+  <div className="container">
   <a href="/docs/cse/get-started-with-cloud-siem/cse-heads-up-display"><img src={useBaseUrl('img/icons/security/siem-challenges.png')} alt="icon" width="40"/><h4>Cloud SIEM Heads Up Display</h4></a>
   <p>Learn how to use the Heads Up Display to perform threat investigations.</p>
   </div>
@@ -29,8 +35,8 @@ This guide helps you get started using Cloud SIEM for threat hunting.
 </div>
 <div className="box smallbox card">
   <div className="container">
-  <a href="/docs/cse/get-started-with-cloud-siem/onboarding-checklist-cse"><img src={useBaseUrl('img/icons/security/compliance.png')} alt="icon" width="40"/><h4>Cloud SIEM Onboarding Checklist</h4></a>
-  <p>Get up and running quickly with Cloud SIEM administrator tasks.</p>
+  <a href="/docs/cse/get-started-with-cloud-siem/features"><img src={useBaseUrl('img/icons/security/siem-challenges.png')} alt="icon" width="40"/><h4>Cloud SIEM Feature List</h4></a>
+  <p>Learn about Cloud SIEM features.</p>
   </div>
 </div>
 </div>

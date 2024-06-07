@@ -19,7 +19,7 @@ This article provides a high-level checklist of Cloud SIEM installation and conf
 
 ## Onboard with Professional Services
 
-While you might be able to do some of the tasks in this checklist on your own, many require the assistance of the Professional Services team.  Therefore, do not attempt to do the checklist on your own. Ask your Sumo Logic account representative to engage the Professional Services team to guide you through the onboarding tasks. Sumo Logic offers a complete Quickstart package through the Professional Services team that covers these tasks, as well as other configurations not listed here. We provide this article as a convenience to help you keep track of your work as Professional Services helps you onboard to Cloud SIEM.
+While you might be able to do some of the tasks in this checklist yourself, many require the assistance of the Professional Services team.  Therefore, do not attempt to do the checklist on your own. Ask your Sumo Logic account representative to engage the Professional Services team to guide you through the onboarding tasks. Sumo Logic offers a complete Quickstart package through the Professional Services team that covers these tasks, as well as other configurations not listed here. We provide this article as a convenience to help you keep track of your work as Professional Services helps you onboard to Cloud SIEM.
 
 ## Prepare for onboarding
 

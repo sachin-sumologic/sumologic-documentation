@@ -2475,10 +2475,11 @@ integrations: [
           collapsed: true,
           link: {type: 'doc', id: 'cse/get-started-with-cloud-siem/index'},
           items: [
+            'cse/get-started-with-cloud-siem/onboarding-checklist-cse',
             'cse/get-started-with-cloud-siem/cse-heads-up-display',
             'cse/get-started-with-cloud-siem/insight-generation-process',
             'cse/get-started-with-cloud-siem/about-cse-insight-ui',
-            'cse/get-started-with-cloud-siem/onboarding-checklist-cse',
+            'cse/get-started-with-cloud-siem/cloud-siem-features',
           ],
         },
         {

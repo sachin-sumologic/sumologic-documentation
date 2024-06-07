@@ -279,7 +279,7 @@ Cloud SIEM takes everything one step further and correlates those Signals into a
 
 An Insight is a group of Signals clustered around a single entity. An Insight is created when the sum of the severity scores of Signals with the same entity goes above a certain activity score within a certain timeframe. By default, this is an activity score of 12 within the last 14 days. For example, if a rule was triggered with a severity of 5, and then ten days later another rule with the same entity and a severity of 5 was triggered, the total activity score would only be 10 in the last 14 days, so an Insight would not be created. However, if those same two rules had a severity score of 7, an Insight would be created.
 
-## Get started with threat investigation
+## Using Cloud SIEM for threat investigation
 
 Threat investigation is reactive while threat hunting is proactive. Typically, threat investigation happens in response to an alert. Once you’ve investigated a threat, you can hunt for similar threats and take precautionary steps to prevent attacks from happening again.
 
