@@ -35,7 +35,7 @@ This guide helps you get started using Cloud SIEM for threat hunting.
 </div>
 <div className="box smallbox card">
   <div className="container">
-  <a href="/docs/cse/get-started-with-cloud-siem/features"><img src={useBaseUrl('img/icons/security/siem-challenges.png')} alt="icon" width="40"/><h4>Cloud SIEM Feature List</h4></a>
+  <a href="/docs/cse/get-started-with-cloud-siem/cloud-siem-features/"><img src={useBaseUrl('img/icons/security/siem-challenges.png')} alt="icon" width="40"/><h4>Cloud SIEM Feature List</h4></a>
   <p>Learn about Cloud SIEM features.</p>
   </div>
 </div>
